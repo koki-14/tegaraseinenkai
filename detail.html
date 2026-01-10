@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>手柄青年会｜詳細</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 共通メニュー -->
+<div id="menu"></div>
+
+<!-- スライドショー -->
+<div class="slideshow">
+  <img id="slideImage" src="img/slide1.jpg">
+</div>
+
+
+<main>
+  <h2>詳細</h2>
+  <p>活動内容、地域行事の紹介ページです。</p>
+</main>
+
+<script src="js/main.js"></script>
+<script>
+fetch("common/menu.html")
+  .then(res => res.text())
+  .then(html => document.getElementById("menu").innerHTML = html);
+</script>
+</body>
+</html>
