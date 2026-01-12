@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  background: #f5f5f0;
+}
+
+/* ヘッダー */
+.header {
+  display: flex;
+  align-items: center;
+  background: #2f4f4f;
+  color: white;
+  padding: 10px;
+}
+
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+
+.header h1 {
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+/* ===== ヒーロー ===== */
+.hero {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== 本文エリア ===== */
+.content-wrap {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* 背景スライドショー（本文専用） */
+.bg-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* スライドメニュー */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 220px;
+  height: 100%;
+  background: #3e5f5f;
+  padding-top: 60px;
+  transition: 0.3s;
+}
+
+.side-menu a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+
+.side-menu.open {
+  left: 0;
+}
+
+/* ===== 背景スライドショー ===== */
+.slideshow {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;        /* 画面いっぱい */
+  z-index: -1;          /* 一番後ろに */
+  overflow: hidden;
+}
+
+.slideshow img {
+  position: fixed;            /* ← 中央固定の正体 */
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px 20px;
+  z-index: 1;
+  color: white;
+}
+
+/* 文字を読みやすく */
+main {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}

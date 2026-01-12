@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>手柄青年会｜ホーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 共通メニュー -->
+<div id="menu"></div>
+
+<!-- ヒーロー画像（最初だけ） -->
+<section class="hero">
+  <img src="img/hero.jpg" alt="ヒーロー画像">
+</section>
+
+<!-- 本文（背景スライドショー） -->
+<section class="content-wrap">
+
+  <!-- 背景スライドショー -->
+  <div class="bg-slideshow">
+    <img id="slideImage" src="img/slide1.jpg" alt="">
+  </div>
+
+  <main>
+    <h1>手柄青年会</h1>
+    <h2>ご挨拶</h2>
+    <p>こちらは手柄青年会の公式サイトです。</p>
+
+    <h2>紹介</h2>
+    <p>このサイトでは手柄青年会の情報を主に発信しています。</p>
+    <p>手柄青年会とは、兵庫県姫路市にある手柄地区の青年会です。</p>
+  </main>
+
+</section>
+
+<script src="js/main.js"></script>
+<script>
+fetch("common/menu.html")
+  .then(res => res.text())
+  .then(html => document.getElementById("menu").innerHTML = html);
+</script>
+
+</body>
+</html>
+
+
